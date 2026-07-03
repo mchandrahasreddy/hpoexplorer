@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use HPO Explorer in your work, please cite it as below."
+title: "HPO Explorer"
+abstract: >-
+  A free, privacy-preserving web application that pairs an interactive Human
+  Phenotype Ontology browser with a client-side clinical-note-to-HPO extractor
+  (lexical + in-browser semantic matching, negation/family/uncertainty modeling,
+  and annotation-frequency Information-Content weighting), with built-in
+  phenotypic similarity, disease matching, and gene prioritization.
+type: software
+authors:
+  - family-names: Mallireddy
+    given-names: Chandrahas
+    orcid: "https://orcid.org/0009-0005-5410-7190"
+url: "https://hpoexplorer.com"
+repository-code: "https://github.com/mchandrahasreddy/hpoexplorer"
+keywords:
+  - Human Phenotype Ontology
+  - HPO
+  - deep phenotyping
+  - clinical NLP
+  - phenotype extraction
+  - rare disease
+  - genomic diagnosis
+license: CC-BY-4.0
+version: "0.1.0"
+doi: "10.5281/zenodo.21178435"
