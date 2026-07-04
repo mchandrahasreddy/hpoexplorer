@@ -3,48 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HPO Explorer (hpoexplorer.com) — Human Phenotype Ontology Web App</title>
+    <title>HPO Explorer — Human Phenotype Ontology Browser &amp; Clinical-Note HPO Extraction | hpoexplorer.com</title>
     <meta
       name="description"
-      content="HPO Explorer: free web application for the Human Phenotype Ontology and clinical-note-to-HPO extraction at hpoexplorer.com. Not the HPOExplorer R package (neurogenomics/HPOExplorer)."
+      content="HPO Explorer (hpoexplorer.com) is a free web app for the Human Phenotype Ontology: browse ~19,800 phenotypes and extract HPO terms from clinical notes in your browser (NLP, negation- and family-history-aware, nothing uploaded), with disease and gene analysis and Phenopacket export. Not the HPOExplorer R package."
     />
     <meta
       name="keywords"
-      content="HPO Explorer, Human Phenotype Ontology, hpoexplorer.com, clinical NLP, phenotype extraction, rare disease, bioinformatics"
+      content="HPO Explorer, hpoexplorer.com, Human Phenotype Ontology, HPO, clinical note to HPO, HPO term extraction, clinical NLP, phenotype extraction, deep phenotyping, rare disease, genomic diagnosis, Phenopacket, bioinformatics"
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Chandrahas Mallireddy" />
     <link rel="canonical" href="https://hpoexplorer.com/" />
-    <meta property="og:title" content="HPO Explorer — hpoexplorer.com" />
-    <meta
-      property="og:description"
-      content="Free browser-based HPO browser and clinical-note extractor. Not the HPOExplorer R package."
-    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HPO Explorer" />
+    <meta property="og:title" content="HPO Explorer — Human Phenotype Ontology Browser &amp; Clinical-Note HPO Extraction" />
+    <meta property="og:description" content="Free web app: browse the Human Phenotype Ontology and extract HPO terms from clinical notes in your browser. hpoexplorer.com" />
     <meta property="og:url" content="https://hpoexplorer.com/" />
-    <meta http-equiv="refresh" content="0; url=https://hpoexplorer.com/" />
+    <meta property="og:image" content="https://hpoexplorer.com/og-default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HPO Explorer — hpoexplorer.com" />
+    <meta name="twitter:description" content="Browse the Human Phenotype Ontology and extract HPO terms from clinical notes, free and in-browser." />
+    <meta name="twitter:image" content="https://hpoexplorer.com/og-default.png" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "HPO Explorer",
+      "alternateName": "HPOExplorer (hpoexplorer.com)",
       "url": "https://hpoexplorer.com",
       "codeRepository": "https://github.com/mchandrahasreddy/hpoexplorer",
+      "applicationCategory": "MedicalApplication",
+      "applicationSubCategory": "Clinical natural language processing",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript",
+      "softwareVersion": "0.1.0",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "creator": {
+        "@type": "Person",
+        "name": "Chandrahas Mallireddy",
+        "identifier": "https://orcid.org/0009-0005-5410-7190"
+      },
+      "description": "Free, privacy-preserving web app for the Human Phenotype Ontology: interactive browser plus in-browser NLP that extracts HPO terms from clinical notes (negation, family-history, and uncertainty aware), with phenotypic similarity, differential diagnosis, gene prioritization, and CSV/JSON/GA4GH Phenopacket export.",
+      "keywords": "Human Phenotype Ontology, HPO, clinical NLP, phenotype extraction, clinical note to HPO, deep phenotyping, rare disease, genomic diagnosis, Phenopacket",
+      "featureList": [
+        "NLP extraction of HPO terms from clinical notes (runs in the browser)",
+        "Negation, family-history, and uncertainty detection",
+        "Semantic (embedding) matching for lay phrasing",
+        "Phenotypic similarity, differential diagnosis, and gene prioritization",
+        "Export to CSV, JSON, and GA4GH Phenopacket",
+        "Interactive ontology graph and phenotype catalog"
+      ],
       "sameAs": [
         "https://hpoexplorer.com",
         "https://bio.tools/hpo_explorer",
-        "https://doi.org/10.5281/zenodo.21178435"
+        "https://doi.org/10.5281/zenodo.21178435",
+        "https://orcid.org/0009-0005-5410-7190"
       ]
     }
     </script>
-    <script>
-      location.replace('https://hpoexplorer.com/')
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is HPO Explorer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "HPO Explorer (hpoexplorer.com) is a free web application for the Human Phenotype Ontology. It lets you search, browse, and visualize all ~19,800 phenotype terms and extract HPO terms from clinical notes using in-browser natural language processing." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert a clinical note to HPO terms?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Paste the note into HPO Explorer's Clinical Tools at hpoexplorer.com/clinical-note-to-hpo and it extracts the matching HPO terms, handling negation, family history, and uncertainty. The parsing runs entirely in your browser — no note text is uploaded." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the HPOExplorer R package?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. HPO Explorer is a standalone web application at hpoexplorer.com. It is unrelated to the neurogenomics/HPOExplorer R/Bioconductor package, which shares a similar name." }
+        }
+      ]
+    }
     </script>
+
+    <style>
+      :root { color-scheme: light dark; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.6; max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: #1a2233; background: #f7f9fc; }
+      @media (prefers-color-scheme: dark) { body { color: #e7ecf5; background: #0b0f1a; } a { color: #9db4ff; } .lead, .note, footer { color: #9aa6bd !important; } }
+      a { color: #4f46e5; }
+      h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
+      h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+      .lead { font-size: 1.05rem; color: #5b6577; }
+      .cta { display: inline-block; margin: 1rem 0; padding: .7rem 1.2rem; background: #4f46e5; color: #fff; border-radius: .6rem; font-weight: 600; text-decoration: none; }
+      .note { font-size: .9rem; color: #6b7688; }
+      ul { padding-left: 1.2rem; }
+      footer { margin-top: 2.5rem; font-size: .85rem; color: #6b7688; }
+    </style>
   </head>
   <body>
     <h1>HPO Explorer</h1>
-    <p>
-      Free web app for the Human Phenotype Ontology at
-      <a href="https://hpoexplorer.com/">https://hpoexplorer.com</a>.
-      This GitHub repository is the public project home — not the
-      <a href="https://github.com/neurogenomics/HPOExplorer">HPOExplorer R package</a>.
+    <p class="lead">
+      A free web app for the <strong>Human Phenotype Ontology (HPO)</strong> — browse ~19,800
+      phenotype terms and <strong>extract HPO terms from clinical notes</strong> right in your
+      browser.
     </p>
+
+    <a class="cta" href="https://hpoexplorer.com/">Open HPO Explorer →</a>
+    <p class="note">
+      Taking you to <a href="https://hpoexplorer.com/">hpoexplorer.com</a>…
+      <a href="https://hpoexplorer.com/">open it now</a> if you aren't redirected.
+    </p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Clinical note → HPO terms.</strong> In-browser NLP reads free text and maps it to HPO concepts, handling negation ("no seizures"), family history, and uncertainty. Nothing is uploaded.</li>
+      <li><strong>Interactive ontology browser.</strong> Search, an expandable hierarchy tree, and a graph view over the full ontology.</li>
+      <li><strong>Analysis.</strong> Phenotypic similarity, candidate-disease matching (Orphanet), and gene prioritization (NCBI), weighted by how specific each finding is.</li>
+      <li><strong>Interoperable export.</strong> CSV, JSON, and GA4GH Phenopacket for Exomiser / LIRICAL.</li>
+      <li><strong>For everyone.</strong> A plain-language medical-term explainer and a "which conditions feature these traits" explorer for the general public.</li>
+    </ul>
+
+    <h2>Explore the app</h2>
+    <ul>
+      <li><a href="https://hpoexplorer.com/">HPO Explorer home</a></li>
+      <li><a href="https://hpoexplorer.com/clinical-note-to-hpo">Clinical note → HPO extraction</a></li>
+      <li><a href="https://hpoexplorer.com/patient-profile">Clinical Profile Analyzer (extract &amp; analyze)</a></li>
+      <li><a href="https://hpoexplorer.com/glossary">Medical Term Explainer (plain-language HPO glossary)</a></li>
+      <li><a href="https://hpoexplorer.com/conditions">Condition Explorer (traits → associated conditions)</a></li>
+      <li><a href="https://hpoexplorer.com/browse">Browse all phenotypes</a></li>
+      <li><a href="https://hpoexplorer.com/articles">Guides &amp; articles</a></li>
+      <li><a href="https://hpoexplorer.com/about">About &amp; how to cite</a></li>
+    </ul>
+
+    <h2>Not the HPOExplorer R package</h2>
+    <p>
+      This is a standalone <strong>web application</strong> at
+      <a href="https://hpoexplorer.com/">hpoexplorer.com</a> — not the
+      <a href="https://github.com/neurogenomics/HPOExplorer">neurogenomics/HPOExplorer</a>
+      R/Bioconductor package, which shares a similar name.
+    </p>
+
+    <h2>Cite &amp; references</h2>
+    <ul>
+      <li>Software DOI: <a href="https://doi.org/10.5281/zenodo.21178435">10.5281/zenodo.21178435</a> (Zenodo)</li>
+      <li>ELIXIR bio.tools: <a href="https://bio.tools/hpo_explorer">biotools:hpo_explorer</a></li>
+      <li>Author ORCID: <a href="https://orcid.org/0009-0005-5410-7190">0009-0005-5410-7190</a></li>
+    </ul>
+
+    <footer>
+      HPO Explorer is a free, independent, research/educational tool — not a medical device and
+      not medical advice. It uses openly available HPO, Orphanet, and NCBI data with attribution.
+    </footer>
+
+    <script>
+      // Send human visitors to the app after a short delay, so the page's content
+      // stays crawlable (search engines don't wait on the timer). The canonical tag
+      // and the in-page links pass ranking signals to hpoexplorer.com.
+      setTimeout(function () {
+        location.replace('https://hpoexplorer.com/');
+      }, 3000);
+    </script>
   </body>
 </html>
